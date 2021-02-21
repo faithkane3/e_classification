@@ -31,8 +31,9 @@ def new_titanic_data():
 
 def get_titanic_data(cached=False):
     '''
-    This function reads in titanic data from Codeup database if cached == False
-    or if cached == True reads in titanic df from a csv file, returns df
+    This function reads in titanic data from Codeup database and writes data to
+    a csv file if cached == False or if cached == True reads in titanic df from
+    a csv file, returns df.
     '''
     if cached == False or os.path.isfile('titanic_df.csv') == False:
         
@@ -76,8 +77,9 @@ def new_iris_data():
 
 def get_iris_data(cached=False):
     '''
-    This function reads in iris data from Codeup database if cached == False
-    or if cached == True reads in iris df from a csv file, returns df
+    This function reads in iris data from Codeup database and writes data to
+    a csv file if cached == False or if cached == True reads in iris df from
+    a csv file, returns df.
     '''
     if cached == False or os.path.isfile('iris_df.csv') == False:
         
