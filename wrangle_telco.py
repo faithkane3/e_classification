@@ -24,7 +24,7 @@ def wrangle_telco():
     phone_service(object), internet_service_type_id(int)
     """
     df = get_data_from_sql()
-    df.tenure.replace(0, 1, inplace=True)
-    df.total_charges.replace(' ', df.monthly_charges, inplace=True)
-    df.total_charges = df.total_charges.astype(float)
+    df['tenure'] = df.tenure.replace(0, 1)
+    df['total_charges'] = df.total_charges.replace(' ', df.monthly_charges)
+    df['total_charges'] = df.total_charges.astype('float')
     return df
